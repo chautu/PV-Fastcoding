@@ -1,0 +1,747 @@
+@import 'variables';
+@import 'navbar';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+%textLight{
+    color: $light;
+}
+
+%marginSection{
+    margin-top: 10rem;
+}
+
+%a{
+    text-decoration: none;
+    color: $dark;
+    font-weight: 500;
+    font-size: 1.0rem;
+    &:hover{
+        text-decoration: none;
+        color: $dark;
+    }
+}
+
+%numberProduct{
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #D5D5D5;
+}
+
+.row{
+    width: 100%;
+}
+
+
+%h3Mobile{
+    font-size: 20px;
+}
+
+// Header
+.header{
+    background-image: url('../images/home-slider-slide-3.png');
+    background-repeat: no-repeat;
+    background-size: 65% 100%;
+    background-position: right;
+
+    @include mobile{
+        background-size: 85% 100%;
+    }
+
+    &__container{
+        padding: 50px;
+        @include mobile{
+            padding: 5px 20px;
+        }
+
+        @include tablet{
+            padding: 30px 20px 0px 20px;
+        }
+
+        &--icon{
+            @include icon($dark);
+        }
+        &--iconBrown{
+           @include icon($brown);
+        }
+        &--iconMinus{
+            @include icon($dark);
+            transform: rotate(90deg);
+        }
+        h4{
+            margin: 25px 0px;
+            @include mobile{
+                margin: 5px 0px;
+            }
+        }
+        &--textLight{
+            @extend %textLight;
+            @include mobile{
+                margin-bottom: 3px;
+            }
+        }
+        
+        &--right{
+            align-self: center;
+        }
+
+        h1{
+            letter-spacing: 10px;
+            @include mobile{
+                letter-spacing: 2px;
+                font-size: 30px;
+            }
+            @include tablet{
+                font-size: 2rem;
+            }
+        }
+        
+        &--gearUp{
+            margin: 50px 100px;
+            color: $brown;
+            @include mobile{
+                margin: 0px;
+            }
+        }
+    }
+}
+
+//Section 2
+.sectionTwo{
+    background-image: url('../images/section/sectionTwo.png');
+    background-repeat: no-repeat;
+    background-size: 65% 100%;
+    background-position: left;
+    position: relative;
+    @extend %marginSection;
+    height: 410px;
+
+    @include mobile{
+        background-size: 85% 100%;
+        height: 320px;
+    }
+
+    @include tablet{
+        background-size: 50% 100%;
+        height: 290px;
+    }
+
+    &__container{
+        padding-top: 140px;
+        position: relative;
+        height: 100%;
+        text-align: center;
+
+        @include mobile{
+            padding-top: 30px;
+        }
+        @include tablet{
+            padding-top: 70px;
+        }
+        @include ipad{
+            padding-top: 80px;
+        }
+
+        h3{
+            letter-spacing: 8px;
+            text-align: center;
+            align-self: center;
+            color: $while;
+            width: 100%;
+
+            @include mobile{
+                font-size: 20px;
+            }
+
+            @include tablet{
+                text-align: left;
+                padding-left: 20px;
+            }
+            @include ipad{
+                text-align: left;
+                padding-left: 100px;
+            }
+        }
+
+        &--text{
+            position: absolute;
+            right: 111px;
+            top: 20%;
+            width: 49%;
+            border: 1px solid $brown;
+            padding: 39px;
+
+            @include mobile{
+                right: 2px;
+                top: 7%;
+                width: 90%;
+                padding: 30px 0px 0px 0px;
+            }
+            @include tablet{
+                right: 20px;
+                width: 90%;
+                top: 15%;
+                padding: 15px;
+            }
+            @include ipad{
+                right: 20px;
+                width: 70%;
+                top: 15%;
+                padding: 15px;
+            }
+            
+
+            .row{
+                @include mobile{
+                    margin-right: 0px;
+                    margin-left: 0px;
+                }
+                h5{
+                    align-self: center;
+                    color: $while;
+                    padding-top: 50px;
+                    @include mobile{
+                        padding: 0px;
+                    }
+                }
+
+                .col7{
+                    text-align: initial;
+                    padding-left: 50px;
+                    padding-right: 0px;
+                    p{
+                        margin-bottom: 0px ;
+                    }
+    
+                    @include mobile{
+                        padding-left: 0px;
+                    }
+
+                    @include tablet{
+                        padding-left: 75px;
+                    }
+                }
+            }
+
+            .col-12{
+                @include mobile{
+                    padding: 0px;
+                }
+            }
+        }
+
+        &--icon{
+            position: relative;
+        }
+
+        &--down{
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            img{
+                height: 50px;
+            }
+            @include mobile{
+                right: 2px;
+                top: 0;
+            }
+            @include tablet{
+                top: 6px;
+            }
+            @include ipad{
+                top: 6px;
+            }
+        }
+
+        &--while{
+            background: $while;
+            width: 150px;
+            height: 10px;
+
+            @include mobile{
+                width: 30px;
+            }
+        }
+    }
+}
+
+
+//Section 3
+.sectionThree{
+    background-color: $silver;
+    position: relative;
+    @extend %marginSection;
+    height: 410px;
+    padding: 50px 0px 50px 50px;
+    @include mobile{
+        padding: 20px;
+    }
+    @include tablet{
+        padding: 30px;
+    }
+
+    &__container{
+        background-image: url('../images/section/sectionThere.png');
+        background-repeat: no-repeat;
+        background-size: 65% 100%;
+        background-position: right;
+        padding-top: 90px;
+        position: relative;
+        height: 100%;
+        text-align: center;
+        @include mobile{
+            background-size: 85% 100%;
+            padding-top: 30px;
+        } 
+        @include tablet{
+            padding-top: 120px;
+        }
+
+        h3{
+            letter-spacing: 8px;
+            text-align: center;
+            align-self: center;
+            color: $while;
+            width: 100%;
+            @include mobile{
+                font-size: 20px;
+            }
+
+            @include tablet{
+                 text-align: left;
+                 padding-left: 280px;
+            }
+            @include ipad{
+                text-align: left;
+                padding-left: 350px;
+            }
+        }
+
+        &--text{
+            position: absolute;
+            left: 111px;
+            top: 20%;
+            width: 49%;
+            border: 1px solid $brown;
+            padding: 20px 0px 20px 20px;
+            @include mobile{
+                left: 2px;
+                top: 7%;
+                width: 90%;
+                padding: 30px 0px 0px 0px;
+            }
+            @include tablet{
+                left: 0px;
+                width: 80%;
+                top: 5%;
+            }
+            @include ipad{
+                left: 10px;
+                width: 70%;
+                top: 6%;
+                padding: 15px;
+            }
+
+            .row{
+                @include mobile{
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+            }
+            .col5{
+                align-self: center;
+                color: $while;
+                @include mobile{
+                    margin-top: -450px;
+                }
+            }
+            .col7{
+                text-align: initial;
+                padding-left: 50px;
+                padding-right: 0px;
+                p{
+                    margin-bottom: 0px ;
+                }
+                @include mobile{
+                    padding: 5px;
+                    margin-top: 20px;
+                }
+                @include tablet{
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        &--icon{
+            position: relative;
+        }
+
+        &--down{
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            img{
+                height: 50px;
+            }
+            @include mobile{
+                left: 2px;
+                top: -1px;
+            }
+        }
+
+        &--while{
+            background: $silver;
+            width: 150px;
+            height: 10px;
+            @include mobile{
+                width: 30px;
+            }
+        }
+    }
+}
+
+.sectionFour{
+    @extend %marginSection;
+    &__container{
+        padding: 0px 50px;
+        @include mobile{
+            padding: 20px;
+        }
+        @include tablet{
+            padding: 0px 30px;
+        }
+
+        p{
+            text-align: justify;
+        }
+
+        h1{
+            letter-spacing: 8px;
+            text-align: center;
+            width: 100%;
+            @include mobile{
+                font-size: 30px;
+                letter-spacing: 2px;
+            }
+        }
+
+        &--navy{
+            text-align: end;
+            justify-content: flex-end;
+            align-items: center;
+
+            img{
+                height: 2px;
+                width: 80px;
+                margin-right: 10px;
+                @include mobile{
+                    width: 40px;
+                }
+            }
+
+            p{
+                margin-bottom: 0px;
+                width: 500px;
+                text-align: left;
+                background-color: $brown;
+                padding-left: 5px;
+                @include mobile{
+                    width: unset;
+                    padding: 0px 5px;
+                }
+            }
+        }
+
+        &--content{
+            margin-top: 50px;
+            padding: 50px;
+            @include mobile{
+                padding: 0px;
+            }
+            @include tablet{
+                padding: 0px;
+            }
+            @include ipad{
+                padding: 0px;
+            }
+        }
+
+        &--productOne{
+            h2{
+                @extend %numberProduct;
+
+                img{
+                    height: 2px;
+                    width: 80px;
+                }
+            }
+            h3{
+                padding: 20px 0px;
+                margin-bottom: 0px;
+                @include mobile{
+                   font-size: 20px;
+                }
+            }
+
+            a{
+               @extend %a;
+            }
+
+            .col-4{
+                align-self: center;
+                .row{
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 40px;
+                    height: 150px;
+                }
+            }
+
+            .img-vertical-none{
+                @include mobile{
+                   display: none;
+                }
+                @include tablet{
+                    height: 100px;
+                }
+            }
+            .border-logo{
+                @include mobile{
+                    border-left: 2px solid $dark;
+                    margin: 10px 0px;
+                } 
+            }
+        }
+
+        &--imageProduct{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &--VerticalOne{
+            height: 50px;
+
+        }
+
+        &--productLogo{
+            width: 60%;
+            height: 50%;
+            margin-top: -20px;
+        }
+
+        &--productOne_SectionTwo{
+            margin-top: -120px;
+
+            @include mobile{
+                margin-top: 20px;
+            } 
+
+            @include tablet{
+                margin-top: 20px;
+            }
+
+            .col6{
+                .center{
+                    margin: 0 auto;
+                    width: 60%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    @include tablet{
+                        width: 100%;
+                    }
+                    @include ipad{
+                        width: 100%;
+                    }
+
+                    .row{
+                        margin-right: 0px;
+                        margin-left: 0px;
+
+                        .col-6{
+                            padding: 0px;
+                        }
+                    }
+                    a{
+                        @extend %a;
+                    }
+                }
+                img{
+                    padding-left: 20px;
+                    @include mobile{
+                        padding-left: 0px;
+                        height: 50px;
+                    }
+                    @include tablet{
+                        padding-left: 0px;
+                        height: 50px;
+                    }
+                }
+
+                .text{
+                    padding: 0px 20px 10px 20px;
+                    background-color: $brown;
+                    margin-top: 20px;
+                    position: relative;
+                    height: 30px;
+                    @include mobile{
+                        height: 20px;
+                    }
+                    @include tablet{
+                        height: 20px;
+                    }
+
+                    .text-content{
+                        position: absolute;
+                        top: -15px;
+                        @include mobile{
+                            top: -10px;
+                            left: 5px;
+                        }
+                        @include tablet{
+                            top: -10px;
+                            left: 5px;
+                        }
+                    }
+
+                    h3{
+                        letter-spacing: 6px; 
+                        padding: 0px;
+                        margin-bottom: 0px;
+                        @include mobile{
+                            letter-spacing: 2px;
+                        }
+                        @include tablet{
+                            font-size: 1rem;
+                            letter-spacing:2px;
+                        }
+                        @include ipad{
+                            letter-spacing:2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--productTwo{
+            z-index: 10;
+            h2{
+                @extend %numberProduct;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            img{
+                width: 100%;
+                position: inherit;
+                z-index: 10;
+            }
+
+            a{
+                @extend %a;
+            }
+        }
+
+        &--productThere{
+            margin-top: -200px;
+            @include mobile{
+                margin-top: 0px;
+            }
+            .col-5{
+                align-self: flex-end;
+                padding-bottom: 30px;
+            }
+            h2{
+                @extend %numberProduct;
+                text-align: end;
+                margin-bottom: 0px;
+            }
+            img{
+                width: 100%;
+                // position: inherit;
+                // z-index: 10;
+            }
+
+            .logo{
+                margin-right: -180px;
+                @include mobile{
+                    margin-right: -50px;
+                }
+                img{
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+        }
+
+        &--productFour{
+            img{
+                height: 50%;
+                width: 12%;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+
+            .positionDiv{
+                position: relative;
+                margin-right: 20px;
+                height: 50%;
+                width: 13%;
+
+                .img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .positionImg{
+                position: absolute;
+                top: calc(50%  - 10px);
+                left: calc(50% - 20px) ;
+                width: 20%;
+                height: 20%;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.footer{
+    background: $silver;
+    margin-top: 30px;
+    padding: 10px;
+
+    img{
+        width: 100%;
+    }
+
+    a{
+        @extend %a;
+        padding: 0px;
+    }
+
+    &__form{
+        &--input{
+            border: 1px solid $silver;
+            padding: 5px;
+            @include ipad{
+                width: 150px;
+            }
+        }
+        &--btn{
+            background-color: $dark;
+            width: 50px;
+            color: $while;
+            border-color: black;
+            padding: 3px;
+        }
+    }
+}
